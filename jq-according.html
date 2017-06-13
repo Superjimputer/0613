@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        h1 {
+            cursor: pointer;
+            transition: all .4s
+        }
+        h1:hover {
+            color: aqua;
+        }
+        p {
+/*            display: none;*/
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").hide();
+            $("h1").click(function(){
+//                $("p").slideToggle();
+                $(this).next().slideToggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>QWERTYU</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint, rem iusto explicabo reiciendis odit blanditiis officiis quasi enim exercitationem dolores sit minima velit similique impedit fugit, atque hic harum!
+        </p>
+        <h1>QWERTYU</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint, rem iusto explicabo reiciendis odit blanditiis officiis quasi enim exercitationem dolores sit minima velit similique impedit fugit, atque hic harum!
+        </p>
+        <h1>QWERTYU</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint, rem iusto explicabo reiciendis odit blanditiis officiis quasi enim exercitationem dolores sit minima velit similique impedit fugit, atque hic harum!
+        </p>
+        <h1>QWERTYU</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sint, rem iusto explicabo reiciendis odit blanditiis officiis quasi enim exercitationem dolores sit minima velit similique impedit fugit, atque hic harum!
+        </p>
+    </div>
+</body>
+</html>

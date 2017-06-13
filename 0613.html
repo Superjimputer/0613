@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- <script src="jquery-1.12.4.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <script>
+        //        $(document).ready(function() {
+        //            $("h1").click(function() {
+        //                $("p").hide();
+        //                $("p").show();
+        //                $("p").toggle(1200);
+        //                $("p").fadeToggle(1200);
+        //                $("p").slideToggle(1200);
+        })
+        })
+    </script>
+
+    <style>
+        
+        .container {
+            width: 600px;
+            margin: auto;
+        }
+        
+        h1 {cursor: pointer; transition: all;}
+        h1:hover {color:blue;}
+        
+/*        p {display:none;}*/
+        
+        .hamburger {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: relative;
+        }
+        
+        .hamburger span {
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 5px;
+            background-color: white;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            transition: all .5s;
+        }
+        
+        .hamburger span::before, .hamburger span::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 5px;
+            background-color: white;
+            position: absolute;
+            transition: all .5s;
+        }
+        
+        .hamburger span::before {top:-10px;}
+        .hamburger span::after {bottom:-10px;}
+        
+        .hamburger-x span {
+            background-color: transparent;
+            transition: all .5s;
+        }
+                
+        .hamburger-x span::before {transform:rotate(45deg);top:0;transition: all .5s;}
+        .hamburger-x span::after {transform:rotate(-45deg);top:0;transition: all .5s;}
+        
+    </style>
+
+</head>
+
+<body>
+    
+    <div class="hamburger">
+        <span></span>
+    </div>
+    
+    <h1>Heading</h1>
+    <p class="a" id="a">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure sint quas nostrum veniam voluptates distinctio nemo cupiditate. Vero ea ipsam architecto, recusandae ipsa, dolores voluptates non facere sint. Quis, adipisci?</p>
+
+
+    <script>
+        //    document.getElementbyClassName("a")[0]
+
+        //       $("#a").hide();
+        //       $(".a").hide();
+        //       $("p").hide();
+        //        $("h1").hide();
+
+        $(document).ready(function() {
+            $("p").hide();
+            $("h1").click(function() {
+                //         $("p").slideToggle();
+                $(this).next().slideToggle();
+            })
+        })
+        
+        $(document).ready(function(){
+            $(".hamburger").click(function(){
+            $(this).toggleClass("hamburger-x");
+        })
+        })
+    </script>
+
+    <div class="container">
+        <h1>Accordion</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, fugiat? Voluptas qui id assumenda nobis est aperiam unde cupiditate consequuntur vero suscipit blanditiis hic, perspiciatis illo harum iusto mollitia ad.</p>
+        <h1>Accordion</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, fugiat? Voluptas qui id assumenda nobis est aperiam unde cupiditate consequuntur vero suscipit blanditiis hic, perspiciatis illo harum iusto mollitia ad.</p>
+        <h1>Accordion</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, fugiat? Voluptas qui id assumenda nobis est aperiam unde cupiditate consequuntur vero suscipit blanditiis hic, perspiciatis illo harum iusto mollitia ad.</p>
+        <h1>Accordion</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, fugiat? Voluptas qui id assumenda nobis est aperiam unde cupiditate consequuntur vero suscipit blanditiis hic, perspiciatis illo harum iusto mollitia ad.</p>
+    </div>
+
+</body>
+
+</html>
